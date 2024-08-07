@@ -1,13 +1,13 @@
-import baseTestRobot from "./baseTestRobot";
+import BaseTestRobot from './baseTestRobot'
 
-class accountRobot extends baseTestRobot {
-  load() {
-    this._load('?controller=my-account');
+class AccountRobot extends BaseTestRobot {
+  load () {
+    this._load('?controller=my-account')
   }
 
-  isLoaded() {
-    this._matchText('.info-account', 'Welcome to your account.');
+  isLoaded () {
+    this._matchText('.info-account', 'Welcome to your account.')
   }
 }
 
-export default accountRobot;
+export default AccountRobot

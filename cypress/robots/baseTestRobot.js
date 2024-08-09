@@ -3,10 +3,10 @@ class BaseTestRobot {
     cy.visit(path)
   }
 
-  _fillText (locator, text) {
+  _fillText (locator, text, _log = true) {
     const field = cy.get(locator)
     field.clear()
-    field.type(text)
+    field.type(text, { log: _log })
   }
 
   _clickButton (locator) {

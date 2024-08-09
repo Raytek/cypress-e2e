@@ -11,7 +11,7 @@ class LoginRobot extends BaseTestRobot {
   }
 
   setPassword (password) {
-    this._fillText('#passwd', password)
+    this._fillText('#passwd', password, false)
     return this
   }
 

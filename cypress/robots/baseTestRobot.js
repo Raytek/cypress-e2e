@@ -18,6 +18,24 @@ class BaseTestRobot {
     const element = cy.get(locator)
     element.contains(text).should('be.visible')
   }
+
+  _checkbox (locator) {
+    const element = cy.get(locator)
+    element.check()
+  }
+
+  _interceptAllRequests () {
+    cy.intercept('**').as('requests')
+  }
+
+  _waitAllRequests () {
+    cy.wait('@requests')
+  }
+
+  _mustExist (locator) {
+    const element = cy.get(locator)
+    element.should('be.visible').and('have.length.greaterThan', 1)
+  }
 }
 
 export default BaseTestRobot

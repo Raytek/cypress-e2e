@@ -23,6 +23,8 @@ jobs:
 
     - name: Run E2E Tests
       uses: cypress-io/github-action@v6
+      env:
+          CYPRESS_ACCOUNT_PASSWORD: ${{ secrets.CYPRESS_ACCOUNT_PASSWORD }}
       with:
         install: false
         browser: chrome

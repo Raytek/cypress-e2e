@@ -19,7 +19,7 @@ describe('Catalog', () => {
       .mustBringProducts()
   })
 
-  it.only('Filtering by category and size', () => {
+  it('Filtering by category and size', () => {
     catalog
       .setCategory('dresses')
       .setSize('l')

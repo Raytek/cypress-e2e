@@ -19,9 +19,18 @@ class BaseTestRobot {
     element.contains(text).should('be.visible')
   }
 
+  _capitalize (value) {
+    return Cypress._.capitalize(value)
+  }
+
   _checkbox (locator) {
     const element = cy.get(locator)
     element.check()
+  }
+
+  _select (locator, value) {
+    const element = cy.get(locator)
+    element.select(value)
   }
 
   _interceptAllRequests () {

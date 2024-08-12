@@ -36,11 +36,6 @@ class CatalogRobot extends BaseTestRobot {
     }
     return this
   }
-
-  mustBringProducts () {
-    this._waitAllRequests()
-    this._mustExist('.product-container')
-  }
 }
 
 export default CatalogRobot

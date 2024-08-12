@@ -10,7 +10,7 @@
     "lint:fix": "standard --fix"
   },
   "standard": {
-    "globals": [ "describe", "it", "cy", "Cypress", "beforeEach" ]
+    "globals": [ "describe", "it", "context", "cy", "Cypress", "beforeEach" ]
   },
   "author": "Raytek",
   "license": "MIT",

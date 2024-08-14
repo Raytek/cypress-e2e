@@ -36,7 +36,7 @@ describe('Catalog', () => {
   context('Products', () => {
     it('Unavailable', () => {
       product
-        .getProductByName('Faded Short Sleeve T-shirts')
+        .getByName('Faded Short Sleeve T-shirts')
         .setSize('m')
         .setColor('blue')
         .hasPrice(17)
@@ -45,14 +45,14 @@ describe('Catalog', () => {
 
     it('Available with other attributes', () => {
       product
-        .getProductByName('Blouse')
+        .getByName('Blouse')
         .hasPrice(27)
         .isAvailableWithOtherAttrs()
     })
 
     it('Available', () => {
       product
-        .getProductByName('Blouse')
+        .getByName('Blouse')
         .setColor('white')
         .hasPrice(27)
         .isAvailable()

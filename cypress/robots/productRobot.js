@@ -6,7 +6,7 @@ class ProductRobot extends BaseTestRobot {
     this._mustExist('.product-container')
   }
 
-  getProductByName (name) {
+  getByName (name) {
     this._clickButton(`a[class="product-name"][title="${name}"]`)
     return this
   }
